@@ -1,9 +1,9 @@
 import Navbar from "./Navbar";
-import { BsFillCartPlusFill } from "react-icons/Bs";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addToBasket } from "./Reducer";
 import Footer from "./Footer";
+import { CartIcon } from "./Icons";
 
 function ProductDetails() {
   const basket = useSelector((state) => state.basket.items);
@@ -69,7 +69,7 @@ function ProductDetails() {
                     Add to cart
                   </span>
                   <span className="">
-                    <BsFillCartPlusFill />
+                    <CartIcon />
                   </span>
                 </button>
               </div>

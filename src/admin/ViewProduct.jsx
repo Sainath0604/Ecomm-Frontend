@@ -1,13 +1,12 @@
 import { useEffect, useState } from "react";
 import AdminNav from "./AdminNav";
-import { RiDeleteBin6Line } from "react-icons/Ri";
-import { BiEditAlt } from "react-icons/Bi";
-import "../CSS/Admin.css";
+import EditProduct from "./EditProduct";
 import { Oval } from "react-loader-spinner";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import EditProduct from "./EditProduct";
 import { getServerUrl } from "../utility/getServerUrl";
+import "../CSS/Admin.css";
+import { DeleteIcon, EditIcon } from "../components/Icons";
 
 function ViewProduct() {
   const [productInfo, setProductInfo] = useState([]);
@@ -150,19 +149,21 @@ function ViewProduct() {
                         <td className="border p-2">
                           <div className="flex flex-row justify-center">
                             <div className="flex justify-center mr-5">
-                              <RiDeleteBin6Line
+                              <span
                                 className="cursor-pointer text-gray-800 text-2xl hover:text-gray-500"
                                 onClick={() =>
                                   deleteProductInfo(product._id, product.pName)
                                 }
-                              />
+                              >
+                                <DeleteIcon />
+                              </span>
                             </div>
                             <div className="flex justify-center ">
                               <div className="flex justify-center ">
                                 <Popup
                                   trigger={
                                     <button className="button">
-                                      <BiEditAlt />
+                                      <EditIcon />
                                     </button>
                                   }
                                   modal

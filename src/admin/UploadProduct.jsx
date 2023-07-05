@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AdminNav from "./AdminNav";
-import { BsCloudUpload } from "react-icons/Bs";
 import { getServerUrl } from "../utility/getServerUrl";
+import { UploadCloudIcon } from "../components/Icons";
 
 function UploadProduct() {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -63,8 +63,10 @@ function UploadProduct() {
       <div className="flex sm:w-full md:w-4/5 justify-center">
         <div className="flex flex-col items-center m-5 lg:m-10 w-4/5">
           <h1 className="flex items-center justify-center bg-gray-800 rounded-xl font-bold text-gray-100 text-base lg:text-xl lg:w-96 h-10 lg:h-12 p-2 lg:p-5 my-10 shadow-lg hover:shadow-2xl">
-            Upload Product Information
-            <BsCloudUpload className="text-2xl font-bold ml-2 lg:ml-5" />
+            <span>Upload Product Information</span>
+            <span className="text-2xl font-bold ml-2 lg:ml-5">
+              <UploadCloudIcon />
+            </span>
           </h1>
           <div className="m-2 lg:m-5 w-11/12 p-2 lg:p-5 flex flex-col lg:flex-row justify-center lg:gap-x-20">
             <div className=" lg:p-5">

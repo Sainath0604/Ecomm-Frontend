@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { RiDeleteBin6Line } from "react-icons/Ri";
-import { BiEditAlt } from "react-icons/Bi";
 import EditUser from "./EditUser";
+import AdminNav from "./AdminNav";
 import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
-import AdminNav from "./AdminNav";
-import "../CSS/Admin.css";
 import { getServerUrl } from "../utility/getServerUrl";
+import "../CSS/Admin.css";
+import { DeleteIcon, EditIcon } from "../components/Icons";
 
 function ViewUser() {
   const [data, setData] = useState([]);
@@ -129,16 +128,20 @@ function ViewUser() {
                       <td className="border border-gray-500 p-2">
                         <div className="flex justify-center flex-row">
                           <div className="flex justify-center">
-                            <RiDeleteBin6Line
+                            <span
                               className="cursor-pointer text-gray-800 mr-5 hover:text-gray-500 text-xl"
                               onClick={(e) => deleteUser(e, i._id, i.fName)}
-                            />
+                            >
+                              <DeleteIcon />
+                            </span>
                           </div>
                           <div className="flex justify-center ">
                             <Popup
                               trigger={
                                 <button className="button">
-                                  <BiEditAlt className="text-gray-800 hover:text-gray-500 text-xl" />
+                                  <span className="text-gray-800 hover:text-gray-500 text-xl">
+                                    <EditIcon />
+                                  </span>
                                 </button>
                               }
                               modal

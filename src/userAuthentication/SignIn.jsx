@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -81,7 +80,7 @@ function SignIn() {
             </button>
             <div className="mt-10 flex flex-col justify-center gap-y-6 ">
               <div className="">
-                Don't have an account?
+                Don&apos;t have an account?
                 <Link
                   to="/SignUp"
                   className="text-blue-500 hover:text-blue-700 ml-2 "

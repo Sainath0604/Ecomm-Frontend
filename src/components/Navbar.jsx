@@ -1,13 +1,10 @@
 import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
-import { RxCross1 } from "react-icons/Rx";
-import { RxHamburgerMenu } from "react-icons/Rx";
-import { BiUserCircle } from "react-icons/Bi";
-import { CgShoppingCart } from "react-icons/cg";
 import logo from "../Logo/logo.png";
 import { useSelector } from "react-redux";
 import Searchbar from "./Searchbar";
 import Theme from "./Theme";
+import { CartIcon, CrossIcon, HamburgerIcon, UserIcon } from "./Icons";
 
 const navigation = [
   { name: "Dashboard", to: "/" },
@@ -35,12 +32,13 @@ function Navbar() {
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <RxCross1 className="block h-6 w-6" aria-hidden="true" />
+                      <div className="block h-6 w-6">
+                        <CrossIcon />
+                      </div>
                     ) : (
-                      <RxHamburgerMenu
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
+                      <div className="block h-6 w-6">
+                        <HamburgerIcon />
+                      </div>
                     )}
                   </Disclosure.Button>
                 </div>
@@ -94,10 +92,9 @@ function Navbar() {
                       <span className="sr-only">Add to cart</span>
                       <div className="flex flex-row items-center justify-center">
                         <span className="mr-1">
-                          <CgShoppingCart
-                            className="h-6 w-6"
-                            aria-hidden="true"
-                          />
+                          <div className=" h-6 w-6 ">
+                            <CartIcon />
+                          </div>
                         </span>
                         <span>
                           {basket.length === 0 ? <span></span> : basket.length}
@@ -111,7 +108,9 @@ function Navbar() {
                       className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white "
                     >
                       <span className="sr-only">User Account</span>
-                      <BiUserCircle className="h-6 w-6" aria-hidden="true" />
+                      <div className="h-6 w-6 ">
+                        <UserIcon />
+                      </div>
                     </button>
                   </Link>
                 </div>

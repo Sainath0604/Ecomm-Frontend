@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { BsSun } from "react-icons/Bs";
-import { BsMoonStars } from "react-icons/Bs";
+import { MoonStarIcon, SunIcon } from "./Icons";
 
 function Theme() {
   const [dark, setDark] = useState(false);
@@ -23,14 +22,14 @@ function Theme() {
             className="border-2 border-indigo-800 p-2 rounded-full bg-black text-indigo-800"
             onClick={toggle}
           >
-            <BsSun />
+            <SunIcon />
           </button>
         ) : (
           <button
             className="border-2 border-indigo-800 p-2 rounded-full bg-white text-indigo-800"
             onClick={toggle}
           >
-            <BsMoonStars />
+            <MoonStarIcon />
           </button>
         )}
       </div>

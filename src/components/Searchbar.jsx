@@ -1,5 +1,5 @@
-import { BiSearch } from "react-icons/Bi";
 import "../CSS/component.css";
+import { SearchIcon } from "./Icons";
 
 function Searchbar() {
   return (
@@ -8,7 +8,7 @@ function Searchbar() {
         <input className="bg-gray-50" type="text" placeholder="Search" />
       </div>
       <div className=" flex items-center justify-center text-gray-50 bg-sky-500 border-r rounded-r-xl border-sky-300 w-16 h-9 text-2xl">
-        <BiSearch />
+        <SearchIcon />
       </div>
     </div>
   );

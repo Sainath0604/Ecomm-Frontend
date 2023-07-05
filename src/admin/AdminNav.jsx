@@ -1,13 +1,15 @@
 import { Link } from "react-router-dom";
 import logo from "../Logo/logo.png";
-import { BiLogOut } from "react-icons/Bi";
 import { Disclosure } from "@headlessui/react";
-import { RxCross1 } from "react-icons/Rx";
-import { RxHamburgerMenu } from "react-icons/Rx";
-import { RiAdminFill } from "react-icons/Ri";
-import { BsUpload } from "react-icons/Bs";
-import { AiOutlineEye } from "react-icons/Ai";
-import { BsDatabase } from "react-icons/Bs";
+import {
+  AdminIcon,
+  CrossIcon,
+  DatabaseIcon,
+  EyeIcon,
+  HamburgerIcon,
+  LogOutIcon,
+  UploadIcon,
+} from "../components/Icons";
 
 function AdminNav() {
   const logOut = (e) => {
@@ -46,19 +48,25 @@ function AdminNav() {
               <div className="text-sm lg:text-lg ">
                 <Link to="/viewUser">
                   <div className=" hover:bg-gray-700 text-white lg:font-base py-1 pl-1 rounded-md mb-2 flex items-center">
-                    <AiOutlineEye className="mr-3 lg:text-xl" />
+                    <span className="mr-3 lg:text-xl">
+                      <EyeIcon />
+                    </span>
                     <span>View Users</span>
                   </div>
                 </Link>
                 <Link to="/uploadProduct">
                   <div className=" hover:bg-gray-700 text-white lg:font-base py-1 pl-1 rounded-md mb-2 flex items-center">
-                    <BsUpload className="mr-3  lg:text-xl" />
+                    <span className="mr-3 lg:text-xl">
+                      <UploadIcon />
+                    </span>
                     <span>Upload Products</span>
                   </div>
                 </Link>
                 <Link to="/viewProduct">
                   <div className=" hover:bg-gray-700 text-white lg:font-base py-1 pl-1 rounded-md mb-2 flex items-center">
-                    <BsDatabase className="mr-3  lg:text-xl" />
+                    <span className="mr-3 lg:text-xl">
+                      <DatabaseIcon />
+                    </span>
                     <span>View Products</span>
                   </div>
                 </Link>
@@ -70,7 +78,9 @@ function AdminNav() {
               </div>
             </div>
             <div className="pl-1 pb-3">
-              <BiLogOut className="text-3xl cursor-pointer" onClick={logOut} />
+              <span className="text-3xl cursor-pointer" onClick={logOut}>
+                <LogOutIcon />
+              </span>
             </div>
           </div>
         </div>
@@ -88,12 +98,13 @@ function AdminNav() {
                   <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
-                      <RxCross1 className="block h-6 w-6" aria-hidden="true" />
+                      <div className="block h-6 w-6">
+                        <CrossIcon />
+                      </div>
                     ) : (
-                      <RxHamburgerMenu
-                        className="block h-6 w-6"
-                        aria-hidden="true"
-                      />
+                      <div className="block h-6 w-6">
+                        <HamburgerIcon />
+                      </div>
                     )}
                   </Disclosure.Button>
                 </div>
@@ -120,7 +131,9 @@ function AdminNav() {
                       className="rounded-full mr-2 lg:mr-6 bg-gray-800 p-1 text-gray-400 hover:text-white "
                     >
                       <span className="sr-only">Admin Panel</span>
-                      <RiAdminFill className="h-6 w-6" aria-hidden="true" />
+                      <span className="h-6 w-6">
+                        <AdminIcon />
+                      </span>
                     </button>
                   </Link>
 
@@ -129,11 +142,9 @@ function AdminNav() {
                     className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white "
                   >
                     <span className="sr-only">Logout</span>
-                    <BiLogOut
-                      className="h-6 w-6"
-                      aria-hidden="true"
-                      onClick={logOut}
-                    />
+                    <span className="h-6 w-6" onClick={logOut}>
+                      <LogOutIcon />
+                    </span>
                   </button>
                 </div>
               </div>
