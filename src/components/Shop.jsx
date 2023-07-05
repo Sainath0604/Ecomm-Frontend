@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import { Oval } from "react-loader-spinner";
-import "../css/component.css";
+import "../CSS/component.css";
 import Footer from "./Footer";
 import { getServerUrl } from "../utility/getServerUrl";
 
