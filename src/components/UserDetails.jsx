@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import UserHome from "./UserHome";
-import AdminPanel from "../admin/AdminPanel";
+import AdminPanel from "./AdminPanel";
 import { getServerUrl } from "../utility/getServerUrl";
 
 function UserDetails() {
