@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 import { getServerUrl } from "../utility/getServerUrl";
 
 function SignIn() {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -36,7 +36,7 @@ function SignIn() {
           window.localStorage.setItem("token", data.data);
           window.localStorage.setItem("loggedIn", true);
           window.localStorage.setItem("userType", data.userType);
-          history.push("/userDetails");
+          navigate("/userDetails");
         } else {
           alert("Invalid Credentials, please register if you haven't");
         }
