@@ -1,11 +1,14 @@
+import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
 import Navbar from "./Navbar";
 
 function UserHome({ userData }) {
+  const navigate = useNavigate();
+
   const logOut = (e) => {
     e.preventDefault();
     window.localStorage.clear();
-    window.location.href = "./signIn";
+    navigate("/signIn");
   };
   return (
     <div>

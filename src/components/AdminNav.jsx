@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../Logo/logo.png";
 import { Disclosure } from "@headlessui/react";
 import {
@@ -12,10 +13,12 @@ import {
 } from "./Icons";
 
 function AdminNav() {
+  const navigate = useNavigate();
+
   const logOut = (e) => {
     e.preventDefault();
     window.localStorage.clear();
-    window.location.href = "./signIn";
+    navigate("/signIn");
   };
 
   const navigation = [

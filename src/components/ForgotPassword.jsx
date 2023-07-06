@@ -31,7 +31,6 @@ function ForgotPassword() {
         console.log(data);
         alert(data.status);
       });
-    alert("A link to set the password to your email, please check your email");
   }
 
   return (

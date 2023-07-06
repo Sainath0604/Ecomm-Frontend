@@ -1,9 +1,12 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 import { getServerUrl } from "../utility/getServerUrl";
 
 function AdminSignUp() {
+  const navigate = useNavigate();
+
   const [fName, setFname] = useState("");
   const [lName, setLname] = useState("");
   const [email, setEmail] = useState("");
@@ -46,7 +49,7 @@ function AdminSignUp() {
             alert("User Registered, Now you can proceed with login");
             console.log(data, "User Registered");
             if (data.status == "ok") {
-              window.location.href = "./signIn";
+              navigate("/signIn");
             }
           }
         });

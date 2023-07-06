@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
 import { useNavigate } from "react-router-dom";
 import { Oval } from "react-loader-spinner";
-import "../CSS/component.css";
+import Navbar from "./Navbar";
 import Footer from "./Footer";
 import { getServerUrl } from "../utility/getServerUrl";
+import "../CSS/component.css";
 
 function Shop() {
   const navigate = useNavigate();
