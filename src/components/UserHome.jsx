@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Navbar from "../components/Navbar";
+import Navbar from "./Navbar";
 
 function UserHome({ userData }) {
   const logOut = (e) => {

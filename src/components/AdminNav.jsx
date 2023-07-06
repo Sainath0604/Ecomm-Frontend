@@ -9,7 +9,7 @@ import {
   HamburgerIcon,
   LogOutIcon,
   UploadIcon,
-} from "../components/Icons";
+} from "./Icons";
 
 function AdminNav() {
   const logOut = (e) => {

@@ -1,60 +1,55 @@
 import { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 import { getServerUrl } from "../utility/getServerUrl";
 
-function AdminSignUp() {
+function SignUp() {
   const [fName, setFname] = useState("");
   const [lName, setLname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [secretKey, setSecretKey] = useState("");
   const [userType, setUserType] = useState("");
 
   const serverUrl = getServerUrl();
   const registerUrl = new URL("/register", serverUrl);
 
   function registerUser(e) {
-    if (secretKey != "sai") {
-      e.preventDefault();
-      alert("Invalid admin");
-    } else {
-      e.preventDefault();
-      console.log(fName, lName, email, password);
-      fetch(registerUrl, {
-        method: "POST",
-        crossDomain: true,
-        headers: {
-          "Content-Type": "application/json",
-          Accept: "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-        body: JSON.stringify({
-          fName,
-          lName,
-          email,
-          password,
-          userType,
-        }),
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.error) {
-            alert(data.error);
-            console.log("User alerady exists");
-          } else {
-            alert("User Registered, Now you can proceed with login");
-            console.log(data, "User Registered");
-            if (data.status == "ok") {
-              window.location.href = "./signIn";
-            }
+    e.preventDefault();
+    console.log(fName, lName, email, password);
+    const payload = {
+      fName,
+      lName,
+      email,
+      password,
+    };
+    console.log("This is payload", payload);
+    fetch(registerUrl, {
+      method: "POST",
+      crossDomain: true,
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
+      body: JSON.stringify(payload),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.error) {
+          alert(data.error);
+          console.log("User aleready exists");
+        } else {
+          alert("User Registered, Now you can proceed with login");
+          console.log(data, "User Registered");
+          if (data.status == "ok") {
+            window.location.href = "./signIn";
           }
-        });
-    }
+        }
+      });
   }
 
   function UserOrAdmin() {
-    setUserType("admin");
+    setUserType("user");
   }
 
   useEffect(() => {
@@ -67,21 +62,7 @@ function AdminSignUp() {
       <div className="flex justify-center mt-10 h-80">
         <form onSubmit={registerUser} className="w-full max-w-sm">
           <div className="h-10 text-2xl text-center font-bold">
-            <h1>Admin sign up</h1>
-          </div>
-          <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
-              Secret Key
-            </label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="secretKey"
-              type="name"
-              placeholder="Enter secret key"
-              value={secretKey}
-              onChange={(e) => setSecretKey(e.target.value)}
-              required
-            />
+            <h1 value={userType}>User sign up</h1>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -94,7 +75,6 @@ function AdminSignUp() {
               placeholder="Enter your First Name"
               value={fName}
               onChange={(e) => setFname(e.target.value)}
-              required
             />
           </div>
           <div className="mb-4">
@@ -108,7 +88,6 @@ function AdminSignUp() {
               placeholder="Enter your Last Name"
               value={lName}
               onChange={(e) => setLname(e.target.value)}
-              required
             />
           </div>
           <div className="mb-4">
@@ -122,7 +101,6 @@ function AdminSignUp() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              required
             />
           </div>
           <div className="mb-6">
@@ -136,7 +114,6 @@ function AdminSignUp() {
               placeholder="Enter your password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              required
             />
           </div>
           <div className="flex flex-col items-center justify-center">
@@ -163,4 +140,4 @@ function AdminSignUp() {
   );
 }
 
-export default AdminSignUp;
+export default SignUp;
