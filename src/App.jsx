@@ -53,11 +53,11 @@ function App() {
               <Route path="/adminPanel" element={<ErrorPage />} />
             )}
 
-            {userType === "admin" ? (
+            {/* {userType === "admin" ? (
               <Route path="/viewUser" element={<ViewUser />} />
             ) : (
               <Route path="/viewUser" element={<ErrorPage />} />
-            )}
+            )} */}
 
             {userType === "admin" ? (
               <Route path="/editUser" element={<EditUser />} />
@@ -66,6 +66,7 @@ function App() {
             )}
 
             <Route path="/errorPage" element={<ErrorPage />} />
+            <Route path="/viewUser" element={<ViewUser />} />
             <Route path="/uploadProduct" element={<UploadProduct />} />
             <Route path="/viewProduct" element={<ViewProduct />} />
             <Route path="/shop" element={<Shop />} />
