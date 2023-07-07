@@ -18,12 +18,13 @@ function SignUp() {
 
   function registerUser(e) {
     e.preventDefault();
-    console.log(fName, lName, email, password);
+    console.log(fName, lName, email, password, userType);
     const payload = {
       fName,
       lName,
       email,
       password,
+      userType,
     };
     console.log("This is payload", payload);
     fetch(registerUrl, {

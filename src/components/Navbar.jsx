@@ -92,7 +92,7 @@ function Navbar() {
                       <span className="sr-only">Add to cart</span>
                       <div className="flex flex-row items-center justify-center">
                         <span className="mr-1">
-                          <div className=" h-6 w-6 ">
+                          <div className=" h-6 w-6 text-2xl ">
                             <CartIcon />
                           </div>
                         </span>
