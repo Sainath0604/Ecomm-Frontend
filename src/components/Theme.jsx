@@ -19,17 +19,17 @@ function Theme() {
       <div className=" text-xl">
         {dark ? (
           <button
-            className="border-2 border-indigo-800 p-2 rounded-full bg-black text-indigo-800"
+            className="border-2  p-2 rounded-full dark:bg-[#EED8FF] text-indigo-800"
             onClick={toggle}
           >
-            <SunIcon />
+            <MoonStarIcon />
           </button>
         ) : (
           <button
             className="border-2 border-indigo-800 p-2 rounded-full bg-white text-indigo-800"
             onClick={toggle}
           >
-            <MoonStarIcon />
+            <SunIcon />
           </button>
         )}
       </div>

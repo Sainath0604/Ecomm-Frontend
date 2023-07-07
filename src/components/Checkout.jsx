@@ -39,7 +39,7 @@ function Checkout() {
   }, []);
 
   return (
-    <div className="flex flex-col min-h-screen bg-indigo-100 dark:bg-lime-400">
+    <div className="flex flex-col min-h-screen dark:bg-[#D9CFFC]	bg-[#121212]  ">
       <nav>
         <Navbar />
       </nav>
@@ -47,12 +47,12 @@ function Checkout() {
         <div className="flex flex-col  lg:flex-row lg:mx-5 lg:mt-5 mb-8 px-5 md:px-20 lg:px-10 pt-10 lg:pt-5 pb-10 lg:pb-5 gap-y-8 lg:gap-x-12">
           <div className="p-5 w-full lg:w-[70%] ">
             <div className="">
-              <div className="h-36">
-                <div className="font-bold text-2xl">Hello,</div>
+              <div className="h-36 text-[#D9CFFC] dark:text-[#241B35]">
+                <div className="font-bold text-2xlb ">Hello,</div>
                 {isLoggedIn == "true" ? (
                   <div className="flex flex-col ml-5 ">
                     <div>
-                      <span className="mr-2 font-medium text-xl">Name:</span>
+                      <span className="mr-2 font-medium text-xl ">Name:</span>
                       <span className="font-semibold text-2xl">
                         {userData.fName}
                       </span>

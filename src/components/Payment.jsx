@@ -8,11 +8,11 @@ function Payment() {
   const total = getBasketTotal(basket);
 
   return (
-    <div className="flex flex-col min-h-screen bg-indigo-100">
+    <div className="flex flex-col min-h-screen ">
       <nav>
         <Navbar />
       </nav>
-      <main className="bg-indigo-100 flex-grow">
+      <main className="dark:bg-[#D9CFFC]	bg-[#121212] text-[#D9CFFC] dark:text-[#241B35] flex-grow">
         <div className="p-5  pb-5">
           <div className="h-full p-2">
             <div className=" flex flex-col gap-y-4 lg:gap-y-4">
@@ -48,15 +48,18 @@ function Payment() {
                     Payment method:
                   </div>
                   <div className="h-36 lg:h-40 lg:w-80 border border-gray-500 rounded-lg bg-gray-100 flex flex-col p-2 lg:p-5 lg:mt-4">
-                    <div className="flex flex-row items-center justify-center h-12 font-medium text-xl">
-                      <span>Order total: $</span>{" "}
-                      <span className="font-bold text-red-800"> {total}</span>
+                    <div className="flex flex-row items-center justify-center h-12 font-medium text-xl text-[#241B35]">
+                      <span>Order total: &nbsp;</span>
+
+                      <span className="font-bold text-[#bb5dfe]">
+                        $ {total}
+                      </span>
                     </div>
                     <div className="flex items-center justify-center gap-x-4 mt-5">
-                      <button className="border bg-emerald-600 text-gray-50 px-4 py-1 rounded-md lg:h-10">
+                      <button className="border bg-[#932add] text-gray-50 px-4 py-1 rounded-md lg:h-10">
                         online
                       </button>
-                      <button className="border bg-yellow-600 text-gray-50 px-4 py-1 rounded-md lg:h-10">
+                      <button className="border bg-[#932add] text-gray-50 px-4 py-1 rounded-md lg:h-10">
                         Cash On Delivery
                       </button>
                     </div>

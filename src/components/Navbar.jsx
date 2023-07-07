@@ -19,17 +19,14 @@ function Navbar() {
   const basket = useSelector((state) => state.basket.items);
   return (
     <div>
-      <Disclosure
-        as="nav"
-        className="bg-gray-800 sticky border-b border-indigo-400 "
-      >
+      <Disclosure as="nav" className="bg-[#020102] dark:bg-[#d59dff] sticky  ">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
               <div className="relative h-[10vh] flex items-center justify-between">
                 <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
                   {/* Mobile menu button*/}
-                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
+                  <Disclosure.Button className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 dark:hover:bg-[#D9CFFC] hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                     <span className="sr-only">Open main menu</span>
                     {open ? (
                       <div className="block h-6 w-6">
@@ -65,8 +62,8 @@ function Navbar() {
                           to={item.to}
                           className={classNames(
                             item.current
-                              ? "bg-gray-900 text-white"
-                              : "text-gray-300 hover:bg-gray-700 hover:text-white",
+                              ? "bg-gray-900 text-[#241B35]"
+                              : "text-gray-300 dark:text-[#241B35] hover:bg-gray-700 dark:hover:bg-[#D9CFFC] hover:text-white",
                             "rounded-md px-3 py-2 text-sm font-medium"
                           )}
                         >
@@ -87,7 +84,7 @@ function Navbar() {
                   <Link to="/checkout">
                     <button
                       type="button"
-                      className="rounded-full mr-2 lg:mr-6 bg-gray-800 p-1 text-gray-400 hover:text-white "
+                      className="rounded-full mr-2 lg:mr-6 dark:bg-[#d59dff] p-1 text-gray-400 dark:text-[#241B35] hover:text-white "
                     >
                       <span className="sr-only">Add to cart</span>
                       <div className="flex flex-row items-center justify-center">
@@ -105,7 +102,7 @@ function Navbar() {
                   <Link to="/signIn">
                     <button
                       type="button"
-                      className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white "
+                      className="rounded-full dark:bg-[#d59dff] p-1 text-gray-400 dark:text-[#241B35] hover:text-white "
                     >
                       <span className="sr-only">User Account</span>
                       <div className="h-6 w-6 ">

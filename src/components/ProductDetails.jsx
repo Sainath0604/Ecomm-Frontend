@@ -33,7 +33,7 @@ function ProductDetails() {
 
   return (
     <>
-      <div className="flex flex-col min-h-screen bg-gray-50 ">
+      <div className="flex flex-col min-h-screen dark:bg-[#D9CFFC]	bg-[#121212]  ">
         <nav>
           <Navbar />
         </nav>

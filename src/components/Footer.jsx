@@ -10,14 +10,14 @@ import {
 function Footer() {
   return (
     <div className="relative bottom-0 w-full ">
-      <div className="h-[10vh] w-full py-5 bg-gray-800 text-white border-t border-indigo-400 ">
+      <div className="h-[10vh] w-full py-5 bg-[#020102] dark:bg-[#d59dff] text-white dark:text-[#241B35] ">
         <div className="flex justify-center ">
           <div className="flex flex-col-reverse gap-y-4 lg:flex-row lg:justify-between w-[70vw] items-center">
-            <div className="text-sm text-gray-300">
+            <div className="text-sm text-gray-300 dark:text-[#241B35]">
               &#169; 2023 Ecomm, Inc. All rights reserved.
             </div>
             <div>
-              <ul className="flex flex-row gap-4 text-gray-300 text-xl ">
+              <ul className="flex flex-row gap-4 text-gray-300 text-xl dark:text-[#241B35]">
                 <li className="hover:text-white p-2">
                   <a
                     href="https://twitter.com/"

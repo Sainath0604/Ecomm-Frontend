@@ -28,7 +28,7 @@ function CheckoutProduct() {
                     alt="img"
                   />
                 </div>
-                <div className="flex flex-col  items-center justify-center w-96 h-48 p-2 gap-y-2">
+                <div className="flex flex-col  items-center justify-center w-96 h-48 p-2 gap-y-2 text-[#241B35]">
                   <div className=" h-24">
                     <div className=" h-12">
                       <span className="mr-2 font-medium">Name:</span>
