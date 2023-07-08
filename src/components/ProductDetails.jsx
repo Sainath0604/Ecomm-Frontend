@@ -61,7 +61,7 @@ function ProductDetails() {
                     Price:
                   </span>
                   <span className="font-bold text-xl">
-                    $<span>{price}</span>{" "}
+                    &#8377;<span>{price}</span>
                   </span>
                 </div>
                 <button className="h-[4vh] lg:h-[8vh] w-[20] lg:w-[12vw] p-4 lg:p-2 flex justify-center items-center font-bold text-xl bg-rose-600 text-white shadow-none hover:shadow-2xl rounded-lg">

@@ -67,10 +67,17 @@ function AdminSignUp() {
   return (
     <div>
       <Navbar />
-      <div className="flex justify-center mt-10 h-80">
+      <div className="flex justify-center mt-10 h-80 p-5">
         <form onSubmit={registerUser} className="w-full max-w-sm">
-          <div className="h-10 text-2xl text-center font-bold">
-            <h1>Admin sign up</h1>
+          <div className="h-10  flex flex-row justify-between lg:mb-5">
+            <h1 className="text-2xl font-bold" value={userType}>
+              Admin Sign Up
+            </h1>
+            <Link to="/signUp">
+              <button className="bg-[#121212] hover:bg-[#282626] text-gray-50 text-sm p-2 rounded-lg ">
+                User Sign Up
+              </button>
+            </Link>
           </div>
           <div className="mb-4">
             <label className="block text-gray-700 text-sm font-bold mb-2">
@@ -145,7 +152,7 @@ function AdminSignUp() {
           <div className="flex flex-col items-center justify-center">
             <button
               onClick={UserOrAdmin}
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-[#121212] hover:bg-[#282626] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Sign Up

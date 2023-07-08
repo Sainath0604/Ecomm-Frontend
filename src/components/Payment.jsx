@@ -52,12 +52,12 @@ function Payment() {
                       <span>Order total: &nbsp;</span>
 
                       <span className="font-bold text-[#bb5dfe]">
-                        $ {total}
+                        &#8377; {total}
                       </span>
                     </div>
                     <div className="flex items-center justify-center gap-x-4 mt-5">
                       <button className="border bg-[#932add] text-gray-50 px-4 py-1 rounded-md lg:h-10">
-                        online
+                        Online
                       </button>
                       <button className="border bg-[#932add] text-gray-50 px-4 py-1 rounded-md lg:h-10">
                         Cash On Delivery

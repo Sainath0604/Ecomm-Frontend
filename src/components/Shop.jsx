@@ -75,7 +75,7 @@ function Shop() {
                     <p className="text-slate-950 text-lg mb-4">
                       <span className="font-semibold">Price:</span>{" "}
                       <span className="font-bold">
-                        $<span>{product.Price}</span>
+                        &#8377;<span>{product.Price}</span>
                       </span>
                     </p>
                     <button

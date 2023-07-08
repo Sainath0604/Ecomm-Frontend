@@ -10,7 +10,7 @@ import {
 function Footer() {
   return (
     <div className="relative bottom-0 w-full ">
-      <div className="h-[10vh] w-full py-5 bg-[#020102] dark:bg-[#d59dff] text-white dark:text-[#241B35] ">
+      <div className="lg:h-[10vh] w-full py-5 bg-[#020102] dark:bg-[#d59dff] text-white dark:text-[#241B35] ">
         <div className="flex justify-center ">
           <div className="flex flex-col-reverse gap-y-4 lg:flex-row lg:justify-between w-[70vw] items-center">
             <div className="text-sm text-gray-300 dark:text-[#241B35]">

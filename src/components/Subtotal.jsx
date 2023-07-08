@@ -20,13 +20,14 @@ function Subtotal() {
         <div>
           <span className="mr-2 font-semibold text-2xl">Sub-total:</span>
           <span className="font-bold text-2xl">
-            ₹<span className="underline decoration-indigo-500">{total}</span>
+            &#8377;
+            <span className="underline decoration-indigo-500">{total}</span>
           </span>
         </div>
       </div>
       <div className="text-center">
         <button
-          className="border h-12 mb-2 w-1/2 border-emerald-800 rounded-xl bg-emerald-500 text-gray-50"
+          className="border p-2 h-12 mb-2 w-3/4 border-emerald-800 rounded-xl bg-[#121212] hover:bg-[#282626] text-gray-50"
           onClick={() => navigate("/payment")}
         >
           Proceed to payment
