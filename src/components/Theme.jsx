@@ -1,20 +1,35 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MoonStarIcon, SunIcon } from "./Icons";
 
 function Theme() {
   const [dark, setDark] = useState(false);
   const element = document.documentElement;
 
+  useEffect(() => {
+    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    setDark(isDarkMode);
+    if (isDarkMode) {
+      element.classList.add("dark");
+    }
+  }, []);
+
   const toggle = () => {
-    element.classList.toggle("dark");
-    setDark((prev) => !prev);
+    const newDarkMode = !dark;
+    localStorage.setItem("darkMode", newDarkMode);
+    setDark(newDarkMode);
+    if (newDarkMode) {
+      element.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+    }
   };
+
   return (
     <div>
-      <div className=" text-xl">
+      <div className="text-xl">
         {dark ? (
           <button
-            className="border-2  p-2 rounded-full dark:bg-[#EED8FF] text-indigo-800"
+            className="border-2 p-2 rounded-full dark:bg-[#EED8FF] text-indigo-800"
             onClick={toggle}
           >
             <MoonStarIcon />
