@@ -6,13 +6,8 @@ function Theme() {
   const element = document.documentElement;
 
   const toggle = () => {
-    if (dark) {
-      setDark(false);
-      element.classList.remove("dark");
-    } else {
-      setDark(true);
-      element.classList.add("dark");
-    }
+    element.classList.toggle("dark");
+    setDark((prev) => !prev);
   };
   return (
     <div>

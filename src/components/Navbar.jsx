@@ -19,7 +19,7 @@ function Navbar() {
   const basket = useSelector((state) => state.basket.items);
   return (
     <div>
-      <Disclosure as="nav" className="bg-[#020102] dark:bg-[#d59dff] sticky  ">
+      <Disclosure as="nav" className="bg-customDark-500 dark:bg-slate-100 sticky  ">
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
