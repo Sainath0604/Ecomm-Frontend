@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Disclosure } from "@headlessui/react";
-import logo from "../Logo/logo.png";
+import darkLogo from "../Logo/DarkLogo.png";
+import lightLogo from "../Logo/LightLogo.png";
 import { useSelector } from "react-redux";
 import Searchbar from "./Searchbar";
 import Theme from "./Theme";
@@ -17,9 +18,13 @@ function classNames(...classes) {
 
 function Navbar() {
   const basket = useSelector((state) => state.basket.items);
+
   return (
     <div>
-      <Disclosure as="nav" className="bg-customDark-500 dark:bg-slate-100 sticky  ">
+      <Disclosure
+        as="nav"
+        className="bg-customDark-500 dark:bg-slate-200 sticky  "
+      >
         {({ open }) => (
           <>
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 ">
@@ -40,16 +45,16 @@ function Navbar() {
                   </Disclosure.Button>
                 </div>
                 <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                  <div className="flex flex-shrink-0 items-center">
+                  <div className="flex flex-shrink-0 items-center ">
                     <Link to="/">
                       <img
-                        className="block  h-8 w-auto lg:hidden"
-                        src={logo}
+                        className=" h-8 w-auto block dark:hidden"
+                        src={darkLogo}
                         alt="Your Company"
                       />
                       <img
-                        className="hidden  h-8 w-auto lg:block"
-                        src={logo}
+                        className=" h-8 w-auto hidden dark:block"
+                        src={lightLogo}
                         alt="Your Company"
                       />
                     </Link>

@@ -60,7 +60,7 @@ function Shop() {
               {productInfo.map((product) => (
                 <div
                   key={product._id}
-                  className="card my-4 relative p-3 bg-gray-100 rounded-md shadow-lg shadow-cyan-500/50 w-80 h-[450px] "
+                  className="card my-4 relative p-3 bg-gray-100 rounded-md shadow-lg shadow-cyan-500/50 w-80 h-[450px] transition ease-in-out hover:-translate-y-1 hover:scale-100"
                 >
                   <img
                     className="w-full h-4/5 object-contain drop-shadow-2xl rounded-md"

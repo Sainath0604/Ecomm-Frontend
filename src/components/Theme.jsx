@@ -6,7 +6,7 @@ function Theme() {
   const element = document.documentElement;
 
   useEffect(() => {
-    const isDarkMode = localStorage.getItem("darkMode") === "true";
+    const isDarkMode = localStorage.getItem("lightMode") === "true";
     setDark(isDarkMode);
     if (isDarkMode) {
       element.classList.add("dark");
@@ -15,7 +15,7 @@ function Theme() {
 
   const toggle = () => {
     const newDarkMode = !dark;
-    localStorage.setItem("darkMode", newDarkMode);
+    localStorage.setItem("lightMode", newDarkMode);
     setDark(newDarkMode);
     if (newDarkMode) {
       element.classList.add("dark");

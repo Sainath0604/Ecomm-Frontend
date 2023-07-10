@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import logo from "../Logo/logo.png";
+import logo from "../Logo/DarkLogo.png";
 import { Disclosure } from "@headlessui/react";
 import {
   AdminIcon,
