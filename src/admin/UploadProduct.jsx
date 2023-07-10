@@ -1,7 +1,7 @@
 import { useState } from "react";
 import AdminNav from "./AdminNav";
 import { getServerUrl } from "../utility/getServerUrl";
-import { UploadCloudIcon } from "./Icons";
+import { UploadCloudIcon } from "../components/Icons";
 
 function UploadProduct() {
   const [selectedFile, setSelectedFile] = useState(null);

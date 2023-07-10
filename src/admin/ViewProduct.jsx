@@ -6,7 +6,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { getServerUrl } from "../utility/getServerUrl";
 import "../CSS/Admin.css";
-import { DeleteIcon, EditIcon } from "./Icons";
+import { DeleteIcon, EditIcon } from "../components/Icons";
 
 function ViewProduct() {
   const [productInfo, setProductInfo] = useState([]);

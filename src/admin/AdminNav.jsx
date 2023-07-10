@@ -10,7 +10,7 @@ import {
   HamburgerIcon,
   LogOutIcon,
   UploadIcon,
-} from "./Icons";
+} from "../components/Icons";
 
 function AdminNav() {
   const navigate = useNavigate();

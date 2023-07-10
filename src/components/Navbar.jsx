@@ -48,12 +48,12 @@ function Navbar() {
                   <div className="flex flex-shrink-0 items-center ">
                     <Link to="/">
                       <img
-                        className=" h-8 w-auto block dark:hidden"
+                        className="h-8 w-auto block dark:hidden"
                         src={darkLogo}
                         alt="Your Company"
                       />
                       <img
-                        className=" h-8 w-auto hidden dark:block"
+                        className="h-8 w-auto hidden dark:block"
                         src={lightLogo}
                         alt="Your Company"
                       />
