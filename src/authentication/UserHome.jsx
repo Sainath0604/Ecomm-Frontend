@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import PropTypes from "prop-types";
-import Navbar from "./Navbar";
+import Navbar from "../components/Navbar";
 
 function UserHome({ userData }) {
   const navigate = useNavigate();

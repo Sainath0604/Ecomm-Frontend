@@ -1,6 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import StateProvider from "./components/StateProvider";
+import StateProvider from "./toolkit/StateProvider";
 import App from "./App";
 
 createRoot(document.getElementById("root")).render(

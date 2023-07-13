@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import { getBasketTotal } from "./Reducer";
+import { getBasketTotal } from "../toolkit/Reducer";
 import { useNavigate } from "react-router-dom";
 
 function Subtotal() {

@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addToBasket } from "./Reducer";
+import { addToBasket } from "../toolkit/Reducer";
 import Footer from "./Footer";
 import { CartIcon } from "./Icons";
 

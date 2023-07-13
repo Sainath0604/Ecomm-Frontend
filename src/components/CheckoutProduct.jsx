@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { removeFromBasket } from "./Reducer";
+import { removeFromBasket } from "../toolkit/Reducer";
 
 function CheckoutProduct() {
   const basket = useSelector((state) => state.basket.items);

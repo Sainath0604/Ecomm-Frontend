@@ -1,7 +1,7 @@
 import Navbar from "./Navbar";
 import CheckoutProduct from "./CheckoutProduct";
 import { useSelector } from "react-redux";
-import { getBasketTotal } from "./Reducer";
+import { getBasketTotal } from "../toolkit/Reducer";
 import Footer from "./Footer";
 function Payment() {
   const basket = useSelector((state) => state.basket.items);
