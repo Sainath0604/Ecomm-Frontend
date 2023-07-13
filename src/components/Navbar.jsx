@@ -23,7 +23,7 @@ function Navbar() {
     <div>
       <Disclosure
         as="nav"
-        className="bg-customDark-500 dark:bg-slate-200 sticky  "
+        className="bg-customDark-500 dark:bg-[#d59dff] sticky  "
       >
         {({ open }) => (
           <>

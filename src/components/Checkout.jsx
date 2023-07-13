@@ -48,7 +48,7 @@ function Checkout() {
           <div className="p-5 w-full lg:w-[70%] ">
             <div className="">
               <div className="h-36 text-[#D9CFFC] dark:text-[#241B35]">
-                <div className="font-bold text-2xlb ">Hello,</div>
+                <div className="font-bold text-2xl ">Hello,</div>
                 {isLoggedIn == "true" ? (
                   <div className="flex flex-col ml-5 ">
                     <div>

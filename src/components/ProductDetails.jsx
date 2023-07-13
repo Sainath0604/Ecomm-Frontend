@@ -43,11 +43,11 @@ function ProductDetails() {
             key={id}
           >
             <div className="h-3/5 lg:h-[65vh] lg:w-1/2 flex flex-col p-5 lg:space-y-2">
-              <div className="h-[4vh] lg:h-[8vh] bg-indigo-50 shadow-none hover:shadow-2xl rounded-lg pl-5 lg:p-5 font-medium text-xl text-gray-900">
+              <div className=" bg-[#eacfff] p-5 shadow-none  rounded-lg  font-medium text-xl text-gray-900">
                 <span className="mr-3 font-bold ">Product Name:</span>
                 <span>{pName}</span>
               </div>
-              <div className="lg:h-[34vh] p-4 bg-indigo-50 shadow-none hover:shadow-2xl rounded-lg text-gray-900 space-y-2">
+              <div className="lg:h-[34vh] p-4 bg-indigo-50 shadow-none  rounded-lg text-gray-900 space-y-2">
                 <span className=" lg:mr-3 font-bold text-xl ">
                   Product Details:
                 </span>
@@ -56,7 +56,7 @@ function ProductDetails() {
                 </div>
               </div>
               <div className="h-[8vh] lg:h-[16vh] flex flex-row justify-center items-center lg:justify-start space-x-10 lg:space-x-16 p-2">
-                <div className="h-[8vh] w-1/5 p-6 flex justify-center items-center bg-indigo-50 shadow-none hover:shadow-2xl rounded-lg">
+                <div className="h-[8vh] w-1/5 p-6 flex justify-center items-center bg-indigo-50 shadow-none  rounded-lg">
                   <span className="mr-1 lg:mr-3 font-medium text-lg">
                     Price:
                   </span>
@@ -64,7 +64,7 @@ function ProductDetails() {
                     &#8377;<span>{price}</span>
                   </span>
                 </div>
-                <button className="h-[4vh] lg:h-[8vh] w-[20] lg:w-[12vw] p-4 lg:p-2 flex justify-center items-center font-bold text-xl bg-rose-600 text-white shadow-none hover:shadow-2xl rounded-lg">
+                <button className="hover:scale-110   w-[10] lg:w-[12vw] p-4 lg:p-2 flex justify-center items-center font-bold text-xl bg-[#241B35] text-white shadow-none hover:shadow-2xl rounded-lg">
                   <span className="mr-3" onClick={addToCart}>
                     Add to cart
                   </span>
@@ -75,7 +75,7 @@ function ProductDetails() {
               </div>
             </div>
             <div className="h-[30vh] lg:h-[65vh] lg:w-2/5 p-2 lg:p-10 flex justify-center">
-              <div className="bg-indigo-50 shadow-none hover:shadow-2xl rounded-lg p-2 lg:p-8 w-4/5 lg:w-full flex justify-center items-center ">
+              <div className="bg-indigo-50 shadow-none  rounded-lg p-2 lg:p-8 w-4/5 lg:w-full flex justify-center items-center ">
                 <img
                   className="w-4/5 h-4/5 lg:w-full lg:h-full object-contain drop-shadow-2xl rounded-md"
                   src={image}

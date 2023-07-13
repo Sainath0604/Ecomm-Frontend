@@ -22,7 +22,7 @@ function Payment() {
                 </div>
                 <div className="h-28 lg:h-28 lg:w-28">
                   <textarea
-                    className="border-2 border-gray-300 rounded-md resize max-w-[50vw] max-h-[22vh]"
+                    className="border-2 bg-[#d6d6d6] p-2 placeholder-[#000] dark:bg-[#fff] border-gray-300 rounded-md resize max-w-[50vw] max-h-[22vh]"
                     placeholder="Enter your addrress"
                     rows={5}
                     cols={45}
@@ -34,7 +34,7 @@ function Payment() {
                   <div className="h-6 lg:w-60 text-xl font-bold">
                     Review items:
                   </div>
-                  <div>
+                  <div className="w-4/5">
                     <CheckoutProduct />
                   </div>
                 </div>
