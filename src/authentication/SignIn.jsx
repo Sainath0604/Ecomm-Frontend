@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
@@ -11,6 +11,13 @@ function SignIn() {
   const [password, setPassword] = useState("");
   const serverUrl = getServerUrl();
   const loginUrl = new URL("/login", serverUrl);
+
+  useEffect(() => {
+    const isLoggedIn = window.localStorage.getItem("loggedIn");
+    if (isLoggedIn) {
+      navigate("/userDetails");
+    }
+  }, [navigate]);
 
   function loginUser(e) {
     e.preventDefault();
@@ -37,6 +44,7 @@ function SignIn() {
           window.localStorage.setItem("loggedIn", true);
           window.localStorage.setItem("userType", data.userType);
           navigate("/userDetails");
+          // window.location.href = "./userDetails";
         } else {
           alert("Invalid Credentials, please register if you haven't");
         }

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import logo from "../Logo/DarkLogo.png";
 import { Disclosure } from "@headlessui/react";
 import {
@@ -11,15 +11,22 @@ import {
   LogOutIcon,
   UploadIcon,
 } from "../components/Icons";
+import { useEffect } from "react";
 
 function AdminNav() {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const isLoggedIn = window.localStorage.getItem("loggedIn");
+    if (isLoggedIn) {
+      navigate("/userDetails");
+    }
+  }, [navigate]);
 
   const logOut = () => {
     window.localStorage.clear();
-    window.location.href = "./signIn";
-    // navigate("/signIn");
-    console.log("logged-out");
+    // window.location.href = "./signIn";
+    navigate("/signIn");
   };
 
   const navigation = [
