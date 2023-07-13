@@ -76,7 +76,7 @@ function SignIn() {
           </div>
           <div className="flex flex-col items-center justify-center">
             <button
-              className="bg-[#121212] hover:bg-[#282626] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-[#a385db] dark:bg-[#241B35] hover:bg-[#ab82f6] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Sign In
