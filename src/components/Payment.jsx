@@ -15,17 +15,16 @@ function Payment() {
       <main className="dark:bg-[#D9CFFC]	bg-[#121212] text-[#D9CFFC] dark:text-[#241B35] flex-grow">
         <div className="p-5  pb-5">
           <div className="h-full p-2">
-            <div className=" flex flex-col gap-y-4 lg:gap-y-4">
+            <div className=" flex flex-col gap-8 lg:gap-y-4">
               <div className="lg:h-44 flex flex-col lg:items-center lg:flex-row lg:gap-x-8">
                 <div className="h-8 lg:h-28 lg:w-60 text-xl font-bold mb-2">
                   Enter your addrress:
                 </div>
-                <div className="h-28 lg:h-28 lg:w-28">
+                <div className="max-w-3xl w-full">
                   <textarea
-                    className="border-2 bg-[#d6d6d6] p-2 placeholder-[#000] dark:bg-[#fff] border-gray-300 rounded-md resize max-w-[50vw] max-h-[22vh]"
+                    className="border-2 bg-[#d6d6d6] p-2 placeholder-[#000] dark:bg-[#fff] resize-none border-gray-300 rounded-md w-full "
                     placeholder="Enter your addrress"
                     rows={5}
-                    cols={45}
                   />
                 </div>
               </div>
@@ -34,7 +33,7 @@ function Payment() {
                   <div className="h-6 lg:w-60 text-xl font-bold">
                     Review items:
                   </div>
-                  <div className="w-4/5">
+                  <div className="lg:w-4/5">
                     <CheckoutProduct />
                   </div>
                 </div>

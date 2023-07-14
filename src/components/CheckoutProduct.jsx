@@ -16,11 +16,11 @@ function CheckoutProduct() {
 
   return (
     <div>
-      <div className="flex flex-col gap-y-2 ">
+      <div className="flex flex-col gap-2 ">
         {basket.map((item) => (
-          <div className="flex flex-col" key={item.id}>
-            <div className=" mt-5 ">
-              <div className="bg-gray-100 border dark:border-[#241B35] border-[#b770ed] h-48 lg:h-60 p-2 flex items-center lg:gap-x-2 rounded-tr-[4.4em] rounded-bl-[4.4em] shadow-xl">
+          <div className="flex flex-col max-w-3xl" key={item.id}>
+            <div className=" mt-5">
+              <div className="bg-gray-100 border dark:border-[#241B35] border-[#b770ed]  p-2 flex items-center lg:gap-x-2 rounded-tr-[2.4em] rounded-bl-[2.4em] shadow-xl">
                 <div className="h-44 w-64  ">
                   <img
                     className="w-full h-full lg:w-full lg:h-full object-contain drop-shadow-2xl rounded-md "
@@ -28,15 +28,15 @@ function CheckoutProduct() {
                     alt="img"
                   />
                 </div>
-                <div className="flex flex-col  items-center justify-center w-96 h-48 p-2 gap-y-2 text-[#241B35]">
-                  <div className=" h-24">
-                    <div className=" h-12">
+                <div className="flex flex-col  items-center justify-center w-96 p-2 gap-y-2 text-[#241B35]">
+                  <div className=" ">
+                    <div className=" ">
                       <span className="mr-2 font-medium">Name:</span>
-                      <span className="font-semibold text-lg">
+                      <span className="font-semibold text-lg text-red-800">
                         {item.pName}
                       </span>
                     </div>
-                    <div className=" h-12">
+                    <div className=" ">
                       <span className="mr-2 font-medium">Price:</span>
                       <span className="font-semibold text-lg">
                         &#8377;<span>{item.price}</span>
@@ -44,7 +44,7 @@ function CheckoutProduct() {
                     </div>
                   </div>
                   <button
-                    className="border p-1 w-36 h-10 text-center  rounded-lg bg-[#241B35] text-gray-50"
+                    className="border mt-4 p-2 w-36 text-center  rounded-lg bg-[#241B35] text-gray-50"
                     onClick={() => removeFromCart(item.id)}
                   >
                     Remove from cart
