@@ -34,12 +34,12 @@ function ForgotPassword() {
   }
 
   return (
-    <div>
+    <div className="dark:bg-[#D9CFFC]	bg-[#121212] min-h-screen">
       <Navbar />
       <div className="flex justify-center mt-10 h-screen p-5">
         <form onSubmit={resetPassword} className="w-full max-w-sm">
           <div className="mb-4 ">
-            <label className="block text-gray-700 text-sm font-bold mb-2">
+            <label className="block text-[#D9CFFC] dark:text-[#241B35] 0 text-sm font-bold mb-2">
               Email
             </label>
             <input
@@ -53,12 +53,12 @@ function ForgotPassword() {
           </div>
           <div className="flex flex-col items-center justify-center">
             <button
-              className="bg-[#121212] hover:bg-[#282626] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Reset Password
             </button>
-            <div className="mt-8">
+            <div className="mt-8 text-[#D9CFFC] dark:text-[#241B35]">
               Remember your password?
               <Link
                 to="/SignIn"
@@ -67,7 +67,7 @@ function ForgotPassword() {
                 Sign in
               </Link>
             </div>
-            <div className="mt-1">
+            <div className="mt-1 text-[#D9CFFC] dark:text-[#241B35]">
               Don&apos;t have an account?
               <Link
                 to="/SignUp"

@@ -50,15 +50,15 @@ function Payment() {
                     <div className="flex flex-row items-center justify-center h-12 font-medium text-xl text-[#241B35]">
                       <span>Order total: &nbsp;</span>
 
-                      <span className="font-bold text-[#bb5dfe]">
+                      <span className="font-bold text-[#ab3232]">
                         &#8377; {total}
                       </span>
                     </div>
                     <div className="flex items-center justify-center gap-x-4 mt-5">
-                      <button className="border bg-[#932add] text-gray-50 px-4 py-1 rounded-md lg:h-10">
+                      <button className="border bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-gray-50 px-4 py-1 rounded-md lg:h-10">
                         Online
                       </button>
-                      <button className="border bg-[#932add] text-gray-50 px-4 py-1 rounded-md lg:h-10">
+                      <button className="border bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-gray-50 px-4 py-1 rounded-md lg:h-10">
                         Cash On Delivery
                       </button>
                     </div>

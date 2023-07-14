@@ -2,7 +2,30 @@
   margin: 0;
   line-height: inherit;
   height: 100vh;
-  background-color: #f3f4f6;
+  background-color: #dcc9ff;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  background-color: #241b35;
+  color: #fff;
+}
+
+tr:nth-child(even) {
+  background-color: #ffffff;
 }
 
 @media (min-width: 768px) {

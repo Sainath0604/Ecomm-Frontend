@@ -1,3 +1,4 @@
+// import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import logo from "../Logo/DarkLogo.png";
@@ -11,17 +12,16 @@ import {
   LogOutIcon,
   UploadIcon,
 } from "../components/Icons";
-import { useEffect } from "react";
 
 function AdminNav() {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const isLoggedIn = window.localStorage.getItem("loggedIn");
-    if (isLoggedIn) {
-      navigate("/userDetails");
-    }
-  }, [navigate]);
+  // useEffect(() => {
+  //   const isLoggedIn = window.localStorage.getItem("loggedIn");
+  //   if (isLoggedIn) {
+  //     navigate("/userDetails");
+  //   }
+  // }, [navigate]);
 
   const logOut = () => {
     window.localStorage.clear();
@@ -42,7 +42,7 @@ function AdminNav() {
 
   return (
     <>
-      <div className="hidden md:block h-screen w-1/5  bg-gray-800 ">
+      <div className="hidden md:block h-screen w-1/5  bg-[#241B35] ">
         <div className="flex flex-col text-white ">
           <div className="flex flex-col justify-between items-center border-b border-gray-500 h-[19vh] p-4 text-3xl">
             <div className="">

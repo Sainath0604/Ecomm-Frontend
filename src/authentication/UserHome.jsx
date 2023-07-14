@@ -11,34 +11,34 @@ function UserHome({ userData }) {
     navigate("/signIn");
   };
   return (
-    <div>
+    <div className="dark:bg-[#D9CFFC]	bg-[#121212] min-h-screen">
       <Navbar />
       <div className="flex flex-col justify-center items-center p-2 ">
-        <div className="border w-full md:w-2/3 border-gray-700 rounded-xl space-y-4 lg:space-y-8 mt-8 mx-5  lg:m-20  p-4 lg:p-10 text-base ">
-          <div className="border border-gray-900 rounded-lg">
+        <div className="bg-indigo-50 border w-full md:w-2/3 border-gray-700 rounded-xl space-y-4 lg:space-y-8 mt-8 mx-5  lg:m-10 p-4 lg:p-10 text-base ">
+          <div className="border-t border-b border-r border-gray-900 rounded-lg">
             <div className="flex">
-              <div className="border-r border-gray-900 pl-5 pr-5 py-2">
-                <span className="font-bold ">Name</span>
+              <div className="border-r border-l border-gray-900 pl-5 pr-5 rounded-l-lg py-2 bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-[#fff]">
+                <span className="font-bold cursor-default">Name</span>
               </div>
-              <div className="pl-5 py-2">
+              <div className="pl-5 py-2 ">
                 <span>{userData.fName}</span>
               </div>
             </div>
           </div>
-          <div className="border border-gray-900 rounded-lg">
+          <div className="border-t border-b border-r border-gray-900 rounded-lg">
             <div className="flex">
-              <div className="border-r border-gray-900 pl-5 pr-5 py-2">
-                <span className="font-bold">Surname</span>
+              <div className="border-r border-l border-gray-900 pl-5 pr-5 py-2 rounded-l-lg bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-[#fff]">
+                <span className="font-bold cursor-default">Surname</span>
               </div>
               <div className="pl-5 py-2">
                 <span>{userData.lName}</span>
               </div>
             </div>
           </div>
-          <div className="border border-gray-900 rounded-lg">
+          <div className="border-t border-b border-r border-gray-900 rounded-lg">
             <div className="flex">
-              <div className="border-r border-gray-900 pl-5 pr-5 py-2">
-                <span className="font-bold">Email</span>
+              <div className="border-r border-l border-gray-900 pl-5 pr-5 rounded-l-lg py-2 bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-[#fff]">
+                <span className="font-bold cursor-default">Email</span>
               </div>
               <div className="pl-5 py-2 overflow-hidden text-ellipsis hover:text-clip">
                 <span className="">{userData.email}</span>
@@ -46,9 +46,9 @@ function UserHome({ userData }) {
             </div>
           </div>
         </div>
-        <div className="flex justify-center mt-5">
+        <div className="flex justify-center mt-5 lg:mt-0">
           <button
-            className=" border border-sky-500 rounded-lg bg-gray-700 hover:bg-gray-800 text-white p-2 lg:px-5"
+            className=" rounded-lg  py-2 bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-[#fff] p-2 lg:px-5"
             onClick={logOut}
           >
             Logout

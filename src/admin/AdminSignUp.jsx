@@ -77,7 +77,7 @@ function AdminSignUp() {
               Admin Sign Up
             </h1>
             <Link to="/signUp">
-              <button className="bg-[#a385db] dark:bg-[#241B35] hover:bg-[#282626] text-gray-50 text-sm p-2 rounded-lg ">
+              <button className="bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-gray-50 text-sm p-2 rounded-lg ">
                 User Sign Up
               </button>
             </Link>
@@ -87,7 +87,7 @@ function AdminSignUp() {
               Secret Key
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#D9CFFC] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#21193e] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
               id="secretKey"
               type="name"
               placeholder="Enter secret key"
@@ -101,7 +101,7 @@ function AdminSignUp() {
               First Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#D9CFFC] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#21193e] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
               id="fName"
               type="name"
               placeholder="Enter your First Name"
@@ -115,7 +115,7 @@ function AdminSignUp() {
               Last Name
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#D9CFFC] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#21193e] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
               id="lName"
               type="name"
               placeholder="Enter your Last Name"
@@ -129,7 +129,7 @@ function AdminSignUp() {
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#D9CFFC] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#21193e] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               placeholder="Enter your email"
@@ -143,7 +143,7 @@ function AdminSignUp() {
               Password
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#D9CFFC] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#21193e] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
               id="password"
               type="password"
               placeholder="Enter your password"
@@ -155,12 +155,12 @@ function AdminSignUp() {
           <div className="flex flex-col items-center justify-center">
             <button
               onClick={UserOrAdmin}
-              className="bg-[#a385db] dark:bg-[#241B35] hover:bg-[#282626] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Sign Up
             </button>
-            <div className="mt-10">
+            <div className="mt-10 text-[#D9CFFC] dark:text-[#241B35]">
               Already have account?
               <Link
                 to="/SignIn"

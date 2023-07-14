@@ -85,12 +85,12 @@ function ViewUser() {
   return (
     <>
       <div className=" md:flex">
-        <div className="AdminNav w-full ">
+        <div className="AdminNav w-full bg-[#dcc9ff]">
           <AdminNav />
         </div>
         <div className="flex sm:w-full md:w-4/5 justify-center ViewProduct">
           <div>
-            <table className="border border-separate border-gray-500 w-[55vw]">
+            <table className="border  border-gray-500 w-[55vw]">
               <caption className="caption-top my-8 lg:my-16 text-3xl font-bold text-gray-800">
                 All Users Information
               </caption>

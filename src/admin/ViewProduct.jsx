@@ -82,7 +82,7 @@ function ViewProduct() {
   return (
     <>
       <div className=" md:flex">
-        <div className="AdminNav w-full ">
+        <div className="AdminNav w-full bg-[#dcc9ff]">
           <AdminNav />
         </div>
         {loading ? (
@@ -103,7 +103,7 @@ function ViewProduct() {
         ) : (
           <div className="flex sm:w-full md:w-4/5 justify-center ViewProduct">
             <div className="mb-10">
-              <table className="border border-separate w-[68vw]">
+              <table className="border  w-[68vw]">
                 <caption className="caption-top my-12 text-3xl font-bold text-gray-900">
                   All Product information
                 </caption>

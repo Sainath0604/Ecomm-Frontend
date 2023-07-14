@@ -61,7 +61,7 @@ function SignIn() {
               Email
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#D9CFFC] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#21193e] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               placeholder="Enter your email"
@@ -74,7 +74,7 @@ function SignIn() {
               Password
             </label>
             <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#D9CFFC] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
+              className="shadow appearance-none border rounded w-full py-2 px-3 text-[#21193e] dark:text-[#241B35] leading-tight focus:outline-none focus:shadow-outline"
               id="password"
               type="password"
               placeholder="Enter your password"
@@ -84,13 +84,13 @@ function SignIn() {
           </div>
           <div className="flex flex-col items-center justify-center">
             <button
-              className="bg-[#a385db] dark:bg-[#241B35] hover:bg-[#ab82f6] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-[#a385db] dark:bg-[#241B35] dark:hover:bg-[#523588] hover:bg-[#594383] text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Sign In
             </button>
             <div className="mt-10 flex flex-col justify-center gap-y-6 ">
-              <div className="">
+              <div className="text-[#D9CFFC] dark:text-[#241B35]">
                 Don&apos;t have an account?
                 <Link
                   to="/SignUp"

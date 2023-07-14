@@ -60,7 +60,7 @@ function ProductDetails() {
                   <span className="mr-1 lg:mr-3 font-medium text-lg">
                     Price:
                   </span>
-                  <span className="font-bold text-xl">
+                  <span className="font-bold text-xl text-red-900">
                     &#8377;<span>{price}</span>
                   </span>
                 </div>
