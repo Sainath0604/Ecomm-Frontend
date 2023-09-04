@@ -40,19 +40,28 @@ function Shop() {
 
       <main className="dark:bg-[#D9CFFC]	bg-[#121212] flex-grow">
         {loading ? (
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <Oval
-              height={80}
-              width={80}
-              color="#4fa94d"
-              wrapperStyle={{}}
-              wrapperClass=""
-              visible={true}
-              ariaLabel="oval-loading"
-              secondaryColor="#4fa94d"
-              strokeWidth={2}
-              strokeWidthSecondary={2}
-            />
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex justify-center flex-col gap-4">
+            <div>
+              <h1 className="text-white dark:text-gray-900 font-semibold text-lg">
+                Please wait as the backend is deployed on a free service hosted
+                on render.com. It may take some time to load. Thank you for your
+                patience.
+              </h1>
+            </div>
+            <div className="flex justify-center">
+              <Oval
+                height={80}
+                width={80}
+                color="#4070cf"
+                wrapperStyle={{}}
+                wrapperClass=""
+                visible={true}
+                ariaLabel="oval-loading"
+                secondaryColor="#4070cf"
+                strokeWidth={4}
+                strokeWidthSecondary={4}
+              />
+            </div>
           </div>
         ) : (
           <div className="flex justify-center lg:p-10 ">
