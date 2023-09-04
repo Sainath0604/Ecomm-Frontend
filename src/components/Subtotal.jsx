@@ -27,7 +27,7 @@ function Subtotal() {
       </div>
       <div className="text-center">
         <button
-          className="border p-2 h-12 mb-2 w-3/4 border-emerald-800 rounded-xl bg-[#121212] hover:bg-[#282626] text-gray-50"
+          className="border p-2 mb-2 w-3/4 border-emerald-800 rounded-xl bg-[#121212] hover:bg-[#282626] text-gray-50"
           onClick={() => navigate("/payment")}
         >
           Proceed to payment
